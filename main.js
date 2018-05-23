@@ -22,12 +22,21 @@ let deck = [];
 
 hitButton.style.display = 'none';
 stayButton.style.display = 'none';
+showStatus();
 
 newGameButton.addEventListener('click', function() {
-  textArea.innerText = 'Started ...';
+  gameStarted = true;
+  gameOver = false;
+  playerWon = false;
+
+  deck = createDeck();
+  dealerCards = [getNextCard(), getNextCard()];
+  playerCards = [getNextCard(), getNextCard()];
+
   newGameButton.style.display = 'none';
   hitButton.style.display = 'inline';
   stayButton.style.display = 'inline';
+  showStatus()
 });
 
 function createDeck() {
@@ -48,16 +57,8 @@ function getCardString(card) {
   return card.value + ' of ' + card.suit;
 }
 
-function getNextCard() {
-  return deck.shift();
+function showStatus() {
+  if (!gameStarted) {
+    textArea.innerText = 'Welcome to Blackjack';
+  }
 }
-
-let deck = createDeck();
-
-let playerCard = [getNextCard(), getNextCard()];
-
-console.log('Welcome to Blackjack!');
-
-console.log('You are dealth: ');
-console.log(' ' + playerCard[0]);
-console.log(' ' + playerCard[1]);
