@@ -1,4 +1,4 @@
-# Game of Life
+# Blackjack
 
 [Link to application](https://coffeina.github.io/Blackjack/)
 
