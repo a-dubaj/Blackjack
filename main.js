@@ -5,12 +5,20 @@ let values = ['Ace', 'King', 'Queen', 'Jack', 'Ten', 'Nine', 'Eight', 'Seven', '
 
 function createDeck() {
   let deck = [];
-  for (let suitIdx = 0; suitIdx < suits.length; suitIdx) {
+  for (let suitIdx = 0; suitIdx < suits.length; suitIdx++) {
     for (let valueIdx = 0; valueIdx < values.length; valueIdx++) {
-      deck.push(value[valueIdx] + ' of ' + suits[suitIdx]);
+      let card = {
+        suit: suits[suitIdx],
+        value: values[valueIdx]
+      };
+      deck.push(card);
     }
   }
   return deck;
+}
+
+function getCardString(card) {
+  return card.value + ' of ' + card.suit;
 }
 
 function getNextCard() {
@@ -18,10 +26,6 @@ function getNextCard() {
 }
 
 let deck = createDeck();
-
-for (let i = 0; i < deck.length; i++) {
-  console.log(dock[i]);
-}
 
 let playerCard = [getNextCard(), getNextCard()];
 
