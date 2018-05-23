@@ -1,12 +1,24 @@
+// Card variables
 let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spaded'];
 let values = ['Ace', 'King', 'Queen', 'Jack', 'Ten', 'Nine', 'Eight', 'Seven', 'Six',
   'Five', 'Four', 'Three', 'Two'
 ];
 
+// DOM variables
 let textArea = document.getElementById('text-area');
 let newGameButton = document.getElementById('new-game-button');
 let hitButton = document.getElementById('hit-button');
 let stayButton = document.getElementById('stay-button');
+
+// Game variable
+let gameStarted = false;
+let gameOver = false;
+let playerWon = false;
+let dealerCard = [];
+let playerCards = [];
+let dealerScore = 0;
+let playerScore = 0;
+let deck = [];
 
 hitButton.style.display = 'none';
 stayButton.style.display = 'none';
