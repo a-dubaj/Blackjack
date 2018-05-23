@@ -76,5 +76,11 @@ function getNextCard() {
 function showStatus() {
   if (!gameStarted) {
     textArea.innerText = 'Welcome to Blackjack';
+    return;
+  }
+
+  for (var i = 0; i < deck.length; i++) {
+    textArea.innerText += '\n' + getCardString(deck[i]);
+
   }
 }
