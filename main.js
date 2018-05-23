@@ -11,6 +11,13 @@ let stayButton = document.getElementById('stay-button');
 hitButton.style.display = 'none';
 stayButton.style.display = 'none';
 
+newGameButton.addEventListener('click', function() {
+  textArea.innerText = 'Started ...';
+  newGameButton.style.display = 'none';
+  hitButton.style.display = 'inline';
+  stayButton.style.display = 'inline';
+});
+
 function createDeck() {
   let deck = [];
   for (let suitIdx = 0; suitIdx < suits.length; suitIdx++) {
