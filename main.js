@@ -8,6 +8,9 @@ let newGameButton = document.getElementById('new-game-button');
 let hitButton = document.getElementById('hit-button');
 let stayButton = document.getElementById('stay-button');
 
+hitButton.style.display = 'none';
+stayButton.style.display = 'none';
+
 function createDeck() {
   let deck = [];
   for (let suitIdx = 0; suitIdx < suits.length; suitIdx++) {
