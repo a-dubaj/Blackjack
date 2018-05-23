@@ -12,18 +12,21 @@ function createDeck() {
   }
   return deck;
 }
+
+function getNextCard() {
+  return deck.shift();
+}
+
 let deck = createDeck();
 
 for (let i = 0; i < deck.length; i++) {
   console.log(dock[i]);
 }
 
-let playerCard = [deck[0], deck[2]];
+let playerCard = [getNextCard(), getNextCard()];
 
 console.log('Welcome to Blackjack!');
 
 console.log('You are dealth: ');
 console.log(' ' + playerCard[0]);
 console.log(' ' + playerCard[1]);
-console.log(' ' + playerCard[2]);
-console.log(' ' + playerCard[3]);
